@@ -1,20 +1,23 @@
 var rainbowWord = require('./rainbow-word');
 var rainbow = rainbowWord.pattern({
-  bold: true,
+  style: 'bold',
+  styles: 'underline',
   save: true
 });
 var rasta = rainbowWord.pattern({
-  bold: true,
-  scheme: ['red', 'yellow', 'green']
+  scheme: [
+    {color: 'red', styles: ['bold', 'underline']},
+    {color: 'yellow', style: 'bold', styles: ['bold', 'underline']},
+    {color: 'green', styles: ['inverse']}]
 });
 var def = rainbowWord.pattern();
 
-var thing = rainbow.color('double','rainbow','all','the','way','across','the','sky');
+var thing = rainbow.convert('double','rainbow','all','the','way','across','the','sky');
 console.log(thing);
-var rastaThing = rasta.color('rasta','colors','all','the','way','across','the','sky');
+var rastaThing = rasta.convert('rasta','colors','all','the','way','across','the','sky');
 console.log(rastaThing);
-console.log(def.color('a','b','c','d'));
-console.log(rainbow.color(
+console.log(def.convert('a','b','c','d','e','f','g'));
+console.log(rainbow.convert(
   'thing1: ' + 1 + ' ',
   'thing2: ' + 2 + ' ',
   'thing0: ' + 0 + ' ',
