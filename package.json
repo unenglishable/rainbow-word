@@ -1,0 +1,11 @@
+{
+  "name": "rainbow-word",
+  "version": "0.0.0",
+  "main": "rainbow-word",
+  "repository": {
+    "type": "git"
+  },
+  "dependencies": {
+    "colors": "^0.6.2"
+  }
+}
