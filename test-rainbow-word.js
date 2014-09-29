@@ -12,14 +12,14 @@ var rasta = rainbowWord.pattern({
 });
 var def = rainbowWord.pattern();
 
-var thing = rainbow.convert('double','rainbow','all','the','way','across','the','sky');
+var thing = rainbow.convert(['double','rainbow','all','the','way','across','the','sky']);
 console.log(thing);
-var rastaThing = rasta.convert('rasta','colors','all','the','way','across','the','sky');
+var rastaThing = rasta.convert(['rasta','colors','all','the','way','across','the','sky']);
 console.log(rastaThing);
-console.log(def.convert('a','b','c','d','e','f','g'));
-console.log(rainbow.convert(
+console.log(def.convert(['a','b','c','d','e','f','g']));
+console.log(rainbow.convert([
   'thing1: ' + 1 + ' ',
   'thing2: ' + 2 + ' ',
   'thing0: ' + 0 + ' ',
   'thing0: ' + 0
-));
+]));

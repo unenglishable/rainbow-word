@@ -26,10 +26,9 @@ var Pattern = function(options) {
   }
 };
 
-Pattern.prototype.convert = function() {
+Pattern.prototype.convert = function(words) {
   var self = this;
   var i = this.position;
-  var words = Array.prototype.slice.call(arguments);
   var result = '';
   words.forEach(function(word) {
     var current = word;
