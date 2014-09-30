@@ -10,6 +10,16 @@ var rasta = rainbowWord.pattern({
     {color: 'yellow', style: 'bold', styles: ['bold', 'underline']},
     {color: 'green', styles: ['inverse']}]
 });
+var pasta = rainbowWord.pattern({
+  scheme: [
+    {color: 'red', bgColor: 'bgYellow', styles: ['bold', 'underline']},
+    {color: 'yellow', bgColor: 'bgGreen', style: ['bold']},
+    {color: 'green', bgColor: 'bgRed', style: ['bold']},
+    {color: 'red', bgColor: 'bgYellow', styles: ['bold', 'underline', 'inverse']},
+    {color: 'yellow', bgColor: 'bgGreen', styles: ['bold', 'inverse']},
+    {color: 'green', bgColor: 'bgRed', styles: ['bold', 'inverse']}]
+});
+console.log(pasta.convert(['pastafari', 'giant', 'flying', 'pasta', 'monstah', 'all', 'the', 'way', 'across', 'the', 'sky']));
 var def = rainbowWord.pattern();
 
 var thing = rainbow.convert(['double','rainbow','all','the','way','across','the','sky']);

@@ -1,6 +1,7 @@
 var chalk = require('chalk');
 var defaults = {
   color: '',
+  bgColor: '',
   scheme: [
     {color: 'red'},
     {color: 'yellow'},
@@ -15,6 +16,7 @@ var Pattern = function(options) {
   this.position = 0;
   if (options) {
     this.color = options.color || defaults.color;
+    this.bgColor = options.bgColor || defaults.bgColor;
     this.scheme = options.scheme || defaults.scheme;
     this.styles = options.style ? [options.style] : (options.styles || defaults.styles);
     this.save = options.save || defaults.save;
@@ -33,11 +35,18 @@ Pattern.prototype.convert = function(words) {
   words.forEach(function(word) {
     var current = word;
     var color = self.color;
+    var bgColor = self.bgColor;
     if (self.scheme[i].color) {
       color = self.scheme[i].color;
     }
+    if (self.scheme[i].bgColor) {
+      bgColor = self.scheme[i].bgColor;
+    }
     if (color) {
       current = chalk[color](current);
+    }
+    if (bgColor) {
+      current = chalk[bgColor](current);
     }
     var styles = self.styles;
     if (self.scheme[i].style) {
