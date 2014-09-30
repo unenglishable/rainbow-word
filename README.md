@@ -36,7 +36,7 @@ a single string.  Cycling through elements in the `scheme`
 array, it converts each argument accordingly.
 
 For a complete list of colors and styles, see the
-colors.js git repo.
+[chalk.js](https://github.com/sindresorhus/chalk) git repo.
 
 ````
 // Use the default pattern
