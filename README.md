@@ -30,7 +30,6 @@ rainbow.convert('Hello', 'World', ...);
 ````
 
 #### .convert(string1, string2, ...);
-
 `.convert()` will combine all arguments supplied to it into
 a single string.  Cycling through elements in the `scheme`
 array, it converts each argument accordingly.
@@ -56,10 +55,11 @@ var default = rw.pattern();
 // Supply options to the pattern constructor
 var options = {
   color: 'red',
+  bgColor: 'bgWhite',
   style: 'bold,
   styles: ['bold', 'underline', ...],
   scheme: [
-    {color: 'red', style: 'bold', styles: ['bold', 'underline', ...]},
+    {color: 'red', bgColor: 'bgWhite', style: 'bold', styles: ['bold', 'underline', ...]},
     {color: 'blue', style: 'bold'},
     {color: 'white', styles: ['bold', 'underline', ...]},
     {color: 'black'},
@@ -76,13 +76,17 @@ Options are parsed as follows:
 
 * If color is not provided in scheme, color option will be used.
 
+* bgColor behaves the same way as color
+
 * If style/styles is/are not provided in scheme, style/styles option will be used.
 
 * If nothing is provided, defaults will be used
-
-See the test file for examples.
 
 The `save` option specifies that the `pattern` should keep
 track of the last element in the `scheme` it used and
 continue there on the next call to `.convert()`.  If `save`
 is false, the position is reset after each call to `.convert()`.
+
+## Examples
+
+See the [example file](./examples.js) for examples.
