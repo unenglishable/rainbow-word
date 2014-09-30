@@ -1,4 +1,4 @@
-var colors = require('colors');
+var chalk = require('chalk');
 var defaults = {
   color: '',
   scheme: [
@@ -37,7 +37,7 @@ Pattern.prototype.convert = function(words) {
       color = self.scheme[i].color;
     }
     if (color) {
-      current = current[color];
+      current = chalk[color](current);
     }
     var styles = self.styles;
     if (self.scheme[i].style) {
@@ -47,7 +47,7 @@ Pattern.prototype.convert = function(words) {
       styles = self.scheme[i].styles;
     }
     styles.forEach(function(style) {
-      current = current[style];
+      current = chalk[style](current);
     });
     result = result.concat(current);
     i++;

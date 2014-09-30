@@ -6,6 +6,6 @@
     "type": "git"
   },
   "dependencies": {
-    "colors": "^0.6.2"
+    "chalk": "^0.5.1"
   }
 }
