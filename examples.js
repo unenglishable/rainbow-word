@@ -5,6 +5,20 @@ var rainbow = rainbowWord.pattern({
   styles: 'underline',
   save: true
 });
+var doubleRainbow = rainbowWord.pattern({
+  scheme: [
+    {color: 'red', bgColor: 'yellow'},
+    {color: 'yellow', bgColor: 'green'},
+    {color: 'green', bgColor: 'blue'},
+
+    {color: 'magenta', bgColor: 'red'},
+    {color: 'red', bgColor: 'bgYellow', styles: ['inverse', 'bold']},
+    {color: 'yellow', bgColor: 'bgGreen', styles: ['inverse', 'bold']},
+    {color: 'green', bgColor: 'bgBlue', styles: ['inverse', 'bold']},
+    {color: 'blue', bgColor: 'bgMagenta', styles: ['inverse', 'bold']},
+    {color: 'magenta', bgColor: 'bgRed', styles: ['inverse', 'bold']}],
+  style: 'bold'
+});
 var rasta = rainbowWord.pattern({
   scheme: [
     {color: 'red', styles: ['bold', 'underline']},
@@ -34,6 +48,7 @@ var exampleWords = [
 
 console.log(defaultPattern.convert(defaultWords));
 console.log(rainbow.convert(rainbowWords));
+console.log(doubleRainbow.convert(rainbowWords));
 console.log(rasta.convert(rastaWords));
 console.log(pasta.convert(pastaWords));
 console.log(rainbow.convert(exampleWords));
