@@ -2,6 +2,8 @@
 
 A node module that uses chalk.js to write strings in a colored/stylized pattern.
 
+![rainbow-word screencap](http://i.imgur.com/jiwaq2Q.png)
+
 ### package.json
 
 ````
