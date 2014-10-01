@@ -1,5 +1,7 @@
 # rainbow-word
 
+A node module that uses chalk.js to write strings in a colored/stylized pattern.
+
 ### package.json
 
 ````
